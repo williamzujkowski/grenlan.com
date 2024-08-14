@@ -15,8 +15,98 @@
     <meta property="og:url" content="https://grenlan.com">
     <meta name="twitter:card" content="assets/william.png">
     <title>William Zujkowski's Personal Website</title>
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-radical.css" type="text/css" />
+
+    <!-- Google Fonts: Noto Sans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+
+
+    <style>
+        /* Critical CSS - Inline */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #007bff;
+            --highlight-color: #d0e7ff;
+            --font-base-size: 1.8rem;
+            --line-height: 1.618;
+            --heading-margin: 2rem 0 1rem;
+        }
+
+        html {
+            font-size: 62.5%;
+            font-family: 'Noto Sans', sans-serif;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: var(--font-base-size);
+            line-height: var(--line-height);
+            max-width: 38em;
+            margin: auto;
+            padding: 1rem;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+            margin: var(--heading-margin);
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.1rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease-in;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--highlight-color);
+            outline: none;
+        }
+    </style>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
