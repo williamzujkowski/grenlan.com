@@ -1,90 +1,84 @@
-/* Non-Critical CSS - Loaded externally */
-
-/* Lists */
-ul {
-    padding-left: 1.5em;
-    margin-bottom: 2rem;
+/* Root variables for color scheme */
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --link-color: #82aaff;
+    --highlight-color: #1c1fc7;
+    --font-base-size: 1.8rem;
+    --line-height: 1.618;
+    --heading-margin: 2rem 0 1rem;
 }
 
-li {
-    margin-bottom: 0.5em;
-}
-
-/* Blockquotes */
-blockquote {
-    padding: 1rem;
-    border-left: 4px solid var(--link-color);
-    background-color: var(--highlight-color);
-    margin-bottom: 2rem;
-}
-
-blockquote p {
+/* Reset default styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-/* Media */
-img,
-video {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
+/* Page layout and typography */
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-/* Preformatted Text and Code */
-pre,
-code {
+body {
+    font-size: var(--font-base-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 2rem;
+    max-width: 50em;
+    margin: auto;
+}
+
+/* Header */
+h1 {
+    font-size: 4rem;
+    color: var(--link-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Form layout and styling */
+fieldset {
+    border: none;
+    padding: 1rem;
     background-color: var(--highlight-color);
-    padding: 0.5rem;
+    color: var(--text-color);
     margin-bottom: 2rem;
-    overflow-x: auto;
-    font-size: 0.9em;
+    border-radius: 8px;
 }
 
-pre {
-    white-space: pre-wrap;
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: block;
 }
 
-code {
-    white-space: nowrap;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-}
-
-td,
-th {
-    padding: 0.5rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-/* Forms and Inputs */
-input,
-textarea,
-select {
+input, select {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #cccccc;
+    border: 1px solid #333;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
+    background-color: #333;
+    color: var(--text-color);
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+input:focus,select:focus {
     border-color: var(--link-color);
     outline: none;
 }
 
 /* Buttons */
-button,
-.button,
-input[type=submit] {
+button {
     padding: 0.5rem 1rem;
-    background-color: var(--link-color);
+    background-color: #333;
     color: #ffffff;
     border: none;
     border-radius: 0.25rem;
@@ -92,62 +86,92 @@ input[type=submit] {
     transition: background-color 0.2s ease-in;
 }
 
-button:hover,
-.button:hover,
-input[type=submit]:hover {
+button:hover {
     background-color: var(--highlight-color);
     color: var(--text-color);
 }
 
-button:disabled,
-.button:disabled,
-input[type=submit]:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+/* Result Section */
+#result {
+    padding: 1.5rem;
+    border: 1px solid var(--link-color);
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
-/* Form Labels */
-label,
-legend {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    display: block;
+/* Email Prompt */
+#emailPromptSection {
+    margin-top: 1.5rem;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #1e1e1e;
-        --text-color: #e0e0e0;
-        --link-color: #82aaff;
-        --highlight-color: #1c1fc7;
-    }
+/* Toast Notification */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Progress Bar Container */
+#progressContainer {
+    width: 100%;
+    background-color: #555; /* Dark background for contrast */
+    height: 20px;
+    border-radius: 10px;
+    margin: 20px 0; /* Add some space around the progress bar */
+    overflow: hidden;
+}
+
+/* Progress Bar Itself */
+#progressBar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50; /* Green color for the progress */
+    text-align: center;
+    line-height: 20px; /* Align text in the center vertically */
+    color: white; /* Text color on the progress bar */
+    border-radius: 10px; /* Rounded edges */
+    transition: width 0.5s; /* Smooth transition for width */
+}
+
+/* Progress Label (Text under progress bar) */
+#progressLabel {
+    color: #ffffff; /* White text */
+    font-size: 1.2rem; /* Adjust font size for readability */
+    margin-top: 10px; /* Space between the bar and label */
+    text-align: center; /* Center align the label text */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
     body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
+        font-size: 1.6rem;
     }
 
-    a:hover,
-    a:focus {
-        color: var(--highlight-color);
-    }
-}
-
-/* High Contrast Mode */
-@media screen and (forced-colors: active) {
-    body {
-        background-color: Window;
-        color: WindowText;
+    h1 {
+        font-size: 3rem;
     }
 
-    a {
-        color: LinkText;
-    }
-
-    a:hover,
-    a:focus {
-        background-color: Highlight;
-        color: HighlightText;
+    button {
+        font-size: 1.5rem;
     }
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizza Calculator for IT Engineers">
+    <meta name="keywords" content="Pizza, Calculator, IT Engineers, Tech Humor, Fun Tool">
+    <meta name="author" content="William Zujkowski">
+    <title>Pizza Calculator for IT Engineers</title>
+
+    <!-- Google Fonts: Noto Sans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Pizza Calculator for IT Engineers</h1>
+            <p>Calculate how much pizza your hungry engineers need after hours of debugging!</p>
+        </header>
+
+        <section>
+            <form id="pizzaForm" onsubmit="return false;" aria-label="Pizza calculation form">
+                <fieldset>
+
+                    <div class="form-group" aria-label="Number of attendees input group">
+                        <legend>Enter Your Details:</legend>
+                        <label for="attendees">Number of Attendees:</label>
+                        <input type="number" id="attendees" name="attendees" min="1" value="5" required
+                            aria-required="true" aria-describedby="attendeesHelp">
+                        <small id="attendeesHelp">Enter the number of people attending your pizza party.</small>
+                    </div>
+
+                    <div class="form-group" aria-label="Pizza style selection group">
+                        <label for="pizzaType">Select Pizza Style:</label>
+                        <select id="pizzaType" name="pizzaType" aria-required="true">
+                            <option value="1" title="NY Pizza: 8 slices per pizza">NY Pizza (Default)</option>
+                            <option value="0.5" title="Detroit Pizza: Thicker crust, 4 slices per pizza">Detroit Pizza
+                                (Thicker and fewer!)</option>
+                            <option value="0.6" title="Chicago Pizza: Deep-dish, 5 slices per pizza">Chicago Pizza
+                                (Deep-dish for the win!)</option>
+                            <option value="2" title="California Pizza Kitchen Pizza: Lighter, 16 slices per pizza">
+                                California Pizza Kitchen Pizza (Light but trendy!)</option>
+                            <option value="3" title="Hot Pockets: 1 per hour of debugging">Hot Pockets (Quick and
+                                regrettable!)</option>
+                            <option value="100" title="Blockchain Pizza: 100 slices, random worth">Blockchain Pizza
+                                (Random slice worth!)</option>
+                            <option value="cloud" title="Cloud Pizza: Auto-scales">Cloud Pizza (Infinite slices,
+                                infinite charges!)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" aria-label="Slices per person input group">
+                        <label for="slicesPerPerson">Average Slices per Person:</label>
+                        <input type="number" id="slicesPerPerson" name="slicesPerPerson" min="1" max="8" value="3"
+                            required aria-required="true">
+                        <small>Adjust if your attendees are light or heavy eaters! (Max 8 slices per person)</small>
+                    </div>
+
+                    <div class="form-group" aria-label="Hours spent debugging input group">
+                        <label for="hoursDebugging">Hours Spent Debugging:</label>
+                        <input type="number" id="hoursDebugging" name="hoursDebugging" min="0" max="10" value="2"
+                            required>
+                        <small>Enter how many hours of debugging your team has endured today (0 to 10).</small>
+                    </div>
+
+                    <button type="button" onclick="calculatePizzas()" aria-live="assertive">Calculate</button>
+                    <button type="button" onclick="downloadReport()" aria-live="assertive">Download Report</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Progress Bar Section -->
+        <section id="progressSection">
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
+            <p id="progressLabel"></p>
+        </section>
+
+        <section id="resultSection">
+            <div id="result" role="alert" aria-live="polite"></div>
+        </section>
+
+        <section id="emailPromptSection" style="display:none;">
+            <p>If you're ordering 42 pizzas or more, please provide your email so our Enterprise Pizza Sales Team can
+                contact you to discuss your large-scale pizza deployment needs:</p>
+            <input type="email" id="emailInput" placeholder="Enter your email" aria-label="Email for pizza sales">
+            <button type="button" onclick="submitEmail()">Submit Email</button>
+        </section>
+
+        <div id="toast" class="toast">Toast message here</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
