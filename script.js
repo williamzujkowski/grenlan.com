@@ -1,3 +1,5 @@
+let calculationCompleted = false; // Flag to track if calculation is completed
+
 function calculatePizzas() {
     const attendeesInput = document.getElementById('attendees');
     const pizzaTypeInput = document.getElementById('pizzaType');
@@ -7,9 +9,10 @@ function calculatePizzas() {
     const progressBar = document.getElementById('progressBar');
     const progressLabel = document.getElementById('progressLabel');
 
-    // Reset progress bar
+    // Reset progress and calculation flag
     progressBar.style.width = '0%';
     progressLabel.innerHTML = '';
+    calculationCompleted = false; // Mark calculation as not yet completed
 
     // Show progress bar and start fake loading process
     const loadingSteps = [
@@ -87,12 +90,15 @@ function calculatePizzas() {
             case "3": // Hot Pockets
                 pizzasRequired = attendees * hoursDebugging; // Each person needs 1 Hot Pocket per hour
                 resultDiv.innerHTML = `<blockquote><p>You need <strong>${pizzasRequired}</strong> Hot Pocket(s) to feed <strong>${attendees}</strong> attendees for <strong>${hoursDebugging} hours</strong> of debugging. Hot Pockets: like server downtime—unexpected and regrettable. 🥵</p></blockquote>`;
+                calculationCompleted = true; // Mark as completed
                 return;
             case "cloud": // Cloud Pizza
                 resultDiv.innerHTML = `<blockquote><p>Cloud Pizza can feed any number of attendees for any duration. Like the cloud, it auto-scales to feed everyone, but the charges will be just as unpredictable! ☁️🍕</p></blockquote>`;
+                calculationCompleted = true; // Mark as completed
                 return;
             case "pineapple": // WiFi Pineapple Pizza
                 resultDiv.innerHTML = `<blockquote><p>WiFi Pineapple Pizza is highly divisive! Loved by some for its tangy, tropical flavor, but beware—it might just capture all your taste buds without you even realizing it. 🍍📡🍕</p></blockquote>`;
+                calculationCompleted = true; // Mark as completed
                 return;
         }
 
@@ -103,6 +109,7 @@ function calculatePizzas() {
         // Special humor for blockchain pizza
         if (pizzaType === "100") {
             resultDiv.innerHTML = `<blockquote><p>You need <strong>${pizzasRequired}</strong> Blockchain Pizza(s) for <strong>${attendees}</strong> attendees. The value of each slice fluctuates wildly—one slice might change the world, while the next one could just crash your appetite. 🍕💸💥</p></blockquote>`;
+            calculationCompleted = true; // Mark as completed
             return;
         }
 
@@ -113,6 +120,7 @@ function calculatePizzas() {
 
         // More detailed report
         window.calculationResult = `Pizza Calculation Report\n\nNumber of Attendees: ${attendees}\nSelected Pizza Style: ${pizzaTypeInput.options[pizzaTypeInput.selectedIndex].text}\nSlices Per Pizza: ${adjustedSlicesPerPizza}\nTotal Pizzas Required: ${pizzasRequired}\nHours Debugging: ${hoursDebugging}\n\n${humorMessage}`;
+        calculationCompleted = true; // Mark calculation as completed
     }
 }
 
@@ -128,7 +136,7 @@ function showToast(message) {
 
 // Download the pizza report as a text file
 function downloadReport() {
-    if (!window.calculationResult) {
+    if (!calculationCompleted || !window.calculationResult) {
         showToast("Please perform a calculation first!");
         return;
     }
