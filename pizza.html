@@ -12,12 +12,81 @@
     <!-- Google Fonts: Noto Sans -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
 
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="pico.indigo.css">
+
+    <style>
+        /* Additional styling for progress bar */
+        #progressContainer {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        #progressBar {
+            height: 20px;
+            width: 0;
+            background-color: #007bff;
+            transition: width 0.5s ease-in-out;
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 17px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <main class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="pizza.html">Pizza Calculator</a></li>
+            </ul>
+        </nav>
         <header>
             <h1>Pizza Calculator for IT Engineers</h1>
             <p>Calculate how much pizza your hungry engineers need after hours of debugging!</p>
@@ -92,10 +161,19 @@
             <input type="email" id="emailInput" placeholder="Enter your email" aria-label="Email for pizza sales">
             <button type="button" onclick="submitEmail()">Submit Email</button>
         </section>
-
+ <!-- Footer -->
+ <footer>
+    <small>
+        © 2024 William Zujkowski. Built with Pico CSS.
+        <a href="https://github.com/williamzujkowski" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank">LinkedIn</a> |
+        <a href="https://steamcommunity.com/id/grenlan/" target="_blank">Steam</a>
+    </small>
+</footer>
         <div id="toast" class="toast">Toast message here</div>
     </main>
     <script src="script.js"></script>
+       
 </body>
 
 </html>
