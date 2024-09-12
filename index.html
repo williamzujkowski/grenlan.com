@@ -19,232 +19,181 @@
     <!-- Google Fonts: Noto Sans -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
 
-
-    <style>
-        /* Critical CSS - Inline */
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-            --link-color: #007bff;
-            --highlight-color: #d0e7ff;
-            --font-base-size: 1.8rem;
-            --line-height: 1.618;
-            --heading-margin: 2rem 0 1rem;
-        }
-
-        html {
-            font-size: 62.5%;
-            font-family: 'Noto Sans', sans-serif;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-size: var(--font-base-size);
-            line-height: var(--line-height);
-            max-width: 38em;
-            margin: auto;
-            padding: 1rem;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: bold;
-            margin: var(--heading-margin);
-        }
-
-        h1 {
-            font-size: 4rem;
-        }
-
-        h2 {
-            font-size: 2.1rem;
-        }
-
-        h3 {
-            font-size: 1.75rem;
-        }
-
-        h4 {
-            font-size: 1.5rem;
-        }
-
-        h5 {
-            font-size: 1.25rem;
-        }
-
-        h6 {
-            font-size: 1rem;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s ease-in;
-        }
-
-        a:hover,
-        a:focus {
-            color: var(--highlight-color);
-            outline: none;
-        }
-    </style>
-
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="index.css">
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="pico.indigo.css">
 </head>
 
 <body>
 
+
+    <!-- Main Content -->
+    <main class="container">
+    <!-- Header & Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="pizza.html">Pizza Calculator</a></li>
+        </ul>
+    </nav>
     <header>
-        <h1>William Zujkowski</h1>
-        <p>Proud Father, Life-long Gamer, and Passionate Technologist</p>
-        <blockquote>I find flaws and make them defect.</blockquote>
+        <hgroup>
+            <h1>William Zujkowski</h1>
+            <p>Proud Father, Life-long Gamer, and Passionate Technologist</p>
+            <blockquote>I find flaws and make them defect.</blockquote>
+        </hgroup>
+
     </header>
 
-    <main>
-
+        <!-- Blog Section with Accordions -->
         <section>
-
+            <header>
+                <h2>Blog</h2>
+            </header>
 
             <article>
-                <header>
-                    <h3>Blog Post: Debugging, Pizza, and Cyber Defense</h3>
+                <details>
+                    <summary>Debugging, Pizza, and Cyber Defense</summary>
                     <time datetime="2024-09-08">September 8, 2024</time>
-                </header>
-                <p>Debugging is like the final raid boss of coding. Except the boss is an ex-NSA cryptographer, and
-                    instead of health points, they hit you with <em>NullPointerException</em> after <em>Segmentation
-                        Fault</em>. But don't worry, just like a zero-day exploit in <strong>Hooligram</strong>'s
-                    messaging service, debugging can be tackled with the right strategy—or in our case, the right fuel:
-                    pizza.</p>
+                    <p>Debugging is like the final raid boss of coding. Except the boss is an ex-NSA cryptographer, and
+                        instead of health points, they hit you with <em>NullPointerException</em> after <em>Segmentation
+                            Fault</em>. But don't worry, just like a zero-day exploit in <strong>Hooligram</strong>'s
+                        messaging service, debugging can be tackled with the right strategy—or in our case, the right
+                        fuel:
+                        pizza.</p>
 
-                <p>If you've ever hit that point where every line of code starts to feel like the punchline of a cosmic
-                    joke, it's time to check out the <a href="https://grenlan.com/pizza.html">Pizza Calculator for IT
-                        Engineers</a>. Why guess how much pizza you need when you could be focusing on figuring out why
-                    your containers are crashing? Whether you’re into <strong>Quantum Blockchain Pizza</strong> (where
-                    each slice is simultaneously valuable and worthless) or <strong>Auto-Scaling Cloud Pizza</strong>
-                    (where you have infinite slices, but still no clue what you’ll be billed for), we’ve got you
-                    covered.</p>
+                    <p>If you've ever hit that point where every line of code starts to feel like the punchline of a
+                        cosmic
+                        joke, it's time to check out the <a href="https://grenlan.com/pizza.html">Pizza Calculator for
+                            IT
+                            Engineers</a>. Why guess how much pizza you need when you could be focusing on figuring out
+                        why
+                        your containers are crashing? Whether you’re into <strong>Quantum Blockchain Pizza</strong>
+                        (where
+                        each slice is simultaneously valuable and worthless) or <strong>Auto-Scaling Cloud
+                            Pizza</strong>
+                        (where you have infinite slices, but still no clue what you’ll be billed for), we’ve got you
+                        covered.</p>
 
-                <p><strong>Pro Tip</strong>: After four hours of debugging, your code may still not work, but your
-                    hunger will scale exponentially. That’s why we suggest upgrading to the <strong>Pizza Elite+
-                        plan</strong>. It’s like horizontal scaling for your stomach.</p>
+                    <p><strong>Pro Tip</strong>: After four hours of debugging, your code may still not work, but your
+                        hunger will scale exponentially. That’s why we suggest upgrading to the <strong>Pizza Elite+
+                            plan</strong>. It’s like horizontal scaling for your stomach.</p>
 
-                <p>Also, memo to the team: <strong>Wi-Fi Pineapple Pizza</strong> has been officially banned from the
-                    office. Why? Because the pineapple keeps hijacking toppings from everyone else. It’s like a
-                    man-in-the-middle attack, but for your pizza.</p>
+                    <p>Also, memo to the team: <strong>Wi-Fi Pineapple Pizza</strong> has been officially banned from
+                        the
+                        office. Why? Because the pineapple keeps hijacking toppings from everyone else. It’s like a
+                        man-in-the-middle attack, but for your pizza.</p>
 
-                <p>So, next time debugging feels like a distributed denial of service on your brain, grab a slice, fire
-                    up the <a href="https://grenlan.com/pizza.html">Pizza Calculator</a>, and keep on coding. Just
-                    remember, if all else fails, it’s always the intern’s fault. 🍕</p>
+                    <p>So, next time debugging feels like a distributed denial of service on your brain, grab a slice,
+                        fire
+                        up the <a href="https://grenlan.com/pizza.html">Pizza Calculator</a>, and keep on coding. Just
+                        remember, if all else fails, it’s always the intern’s fault. 🍕</p>
+                </details>
             </article>
 
-
             <article>
-                <header>
-                    <h3>Blog Post: The Origin of Grenlan</h3>
+                <details>
+                    <summary>The Origin of Grenlan</summary>
                     <time datetime="2024-08-12">August 12, 2024</time>
-                </header>
-                <p>In the summer of '99, I was just getting into <a href="https://www.everquest.com/home">EverQuest</a>,
-                    one
-                    of the pioneering massively multiplayer online role-playing games (MMORPGs). It was an era when
-                    dial-up
-                    internet was the standard, and the sound of a modem connecting was the prelude to countless
-                    adventures.
-                    EverQuest offered an expansive, immersive world called Norrath, where thousands of players could
-                    interact, embark on quests, and battle mythical creatures.</p>
-                <p>Choosing a character class was a pivotal decision in EverQuest, and I was drawn to the Bard. Bards
-                    were
-                    versatile adventurers known for their musical prowess, able to play enchanting songs that could
-                    boost
-                    allies' abilities, debuff enemies, and even travel faster across the vast landscapes. They were the
-                    jack-of-all-trades, bringing a unique blend of support and combat skills to any group.</p>
-                <p>Needing a name for my new half-elf bard, I faced the typical writer's block. That's when I remembered
-                    the
-                    Caesar cipher—a classic cryptographic technique where each letter in the plaintext is shifted a
-                    certain
-                    number of places down or up the alphabet. Picking numbers at random, I jumbled the letters of my
-                    name
-                    and created 'Grenlan'. It was unique, easy to remember, and perfectly suited for my bard's
-                    adventures in
-                    EverQuest. Check out my <a href="https://ap.tritonguild.net/character.php?char=grenlan">character
-                        profile</a>.</p>
-                <p>Since then, Grenlan has been my unique identifier in many MMOs and games, from <a
-                        href="https://worldofwarcraft.com/">World of Warcraft</a> to <a
-                        href="https://dnd.wizards.com/">Dungeons and Dragons</a>. It's a name that carries the spirit of
-                    adventure and camaraderie.</p>
-                <p>One highlight of my EverQuest journey is my high-end raiding guild, <a
-                        href="https://www.tritonguild.net/">Triton</a>. Sometimes, nostalgia hits, and I log in to join
-                    the
-                    raids, reconnecting with old friends and reliving epic battles. Those were the days of long,
-                    strategic
-                    encounters and the thrill of downing a tough boss after many attempts, all while hoping the
-                    connection
-                    wouldn't drop!</p>
+                    <p>In the summer of '99, I was just getting into <a
+                            href="https://www.everquest.com/home">EverQuest</a>,
+                        one
+                        of the pioneering massively multiplayer online role-playing games (MMORPGs). It was an era when
+                        dial-up
+                        internet was the standard, and the sound of a modem connecting was the prelude to countless
+                        adventures.
+                        EverQuest offered an expansive, immersive world called Norrath, where thousands of players could
+                        interact, embark on quests, and battle mythical creatures.</p>
+                    <p>Choosing a character class was a pivotal decision in EverQuest, and I was drawn to the Bard.
+                        Bards
+                        were
+                        versatile adventurers known for their musical prowess, able to play enchanting songs that could
+                        boost
+                        allies' abilities, debuff enemies, and even travel faster across the vast landscapes. They were
+                        the
+                        jack-of-all-trades, bringing a unique blend of support and combat skills to any group.</p>
+                    <p>Needing a name for my new half-elf bard, I faced the typical writer's block. That's when I
+                        remembered
+                        the
+                        Caesar cipher—a classic cryptographic technique where each letter in the plaintext is shifted a
+                        certain
+                        number of places down or up the alphabet. Picking numbers at random, I jumbled the letters of my
+                        name
+                        and created 'Grenlan'. It was unique, easy to remember, and perfectly suited for my bard's
+                        adventures in
+                        EverQuest. Check out my <a
+                            href="https://ap.tritonguild.net/character.php?char=grenlan">character
+                            profile</a>.</p>
+                    <p>Since then, Grenlan has been my unique identifier in many MMOs and games, from <a
+                            href="https://worldofwarcraft.com/">World of Warcraft</a> to <a
+                            href="https://dnd.wizards.com/">Dungeons and Dragons</a>. It's a name that carries the
+                        spirit of
+                        adventure and camaraderie.</p>
+                    <p>One highlight of my EverQuest journey is my high-end raiding guild, <a
+                            href="https://www.tritonguild.net/">Triton</a>. Sometimes, nostalgia hits, and I log in to
+                        join
+                        the
+                        raids, reconnecting with old friends and reliving epic battles. Those were the days of long,
+                        strategic
+                        encounters and the thrill of downing a tough boss after many attempts, all while hoping the
+                        connection
+                        wouldn't drop!</p>
+                </details>
             </article>
+        </section>
 
+        <!-- Personal Passions Section -->
+        <section>
+            <header>
+                <h2>Personal Passions</h2>
+            </header>
             <article>
-                <header>
-                    <h3>Personal Passions</h3>
-                </header>
+                <p>Here are some of my personal interests and passions:</p>
                 <ul>
                     <li>Adventures with my wife and 1-year-old son</li>
-                    <li>Playing video games on <a href="https://steamcommunity.com/id/grenlan/">Steam</a></li>
+                    <li>Playing video games on <a href="https://steamcommunity.com/id/grenlan/"
+                            target="_blank">Steam</a></li>
                     <li>Enjoying <a href="https://www.youtube.com/watch?v=kj0GDeS4A1c" target="_blank">board games</a>
-                        and
-                        <a href="https://www.youtube.com/watch?v=MaiUUitZbns" target="_blank">card games</a>
-                    </li>
+                        and <a href="https://www.youtube.com/watch?v=MaiUUitZbns" target="_blank">card games</a></li>
                     <li>Reading on <a href="https://www.goodreads.com/review/list/52529234-william-zujkowski?shelf=read"
                             target="_blank">Goodreads</a></li>
                 </ul>
             </article>
+        </section>
 
+        <!-- Professional Interests Section -->
+        <section>
+            <header>
+                <h2>Professional Interests</h2>
+            </header>
             <article>
-                <header>
-                    <h3>Professional Interests</h3>
-                </header>
+                <p>I am passionate about the following professional fields:</p>
                 <ul>
                     <li><a href="https://github.com/greatscottgadgets/hackrf" target="_blank">Tinkering with
-                            Hardware</a> - Explore HackRF, an open-source hardware platform for software-defined radio
-                        (SDR) enthusiasts.</li>
-                    <li><a href="https://supercomputing.org/" target="_blank">Supercomputing</a> - Discover the latest
-                        in high-performance computing (HPC) with resources and news from the supercomputing community.
-                    </li>
-                    <li><a href="https://github.com/taubyte/tau" target="_blank">Cloud Computing</a> - Dive into Tau, an
-                        innovative platform for building decentralized applications in the cloud.</li>
+                            Hardware</a> - HackRF platform for SDR enthusiasts</li>
+                    <li><a href="https://supercomputing.org/" target="_blank">Supercomputing</a> - High-performance
+                        computing resources</li>
+                    <li><a href="https://github.com/taubyte/tau" target="_blank">Cloud Computing</a> - Tau platform for
+                        decentralized applications</li>
                     <li><a href="https://en.wikipedia.org/wiki/Computer_security" target="_blank">Cybersecurity</a> -
-                        Learn about the principles and practices that protect information systems from cyber threats.
-                    </li>
+                        Learn about securing information systems</li>
                     <li><a href="https://www.kaggle.com/williamzujkowski" target="_blank">Analyzing Large Datasets</a> -
-                        Access data science projects and datasets on Kaggle to enhance your data analysis skills.</li>
-                    <li><a href="https://huggingface.co/Chaosagent" target="_blank">Exploring AI</a> - Explore AI models
-                        and tools on Hugging Face, a hub for machine learning enthusiasts.</li>
+                        Data science projects on Kaggle</li>
+                    <li><a href="https://huggingface.co/Chaosagent" target="_blank">Exploring AI</a> - AI models and
+                        tools on Hugging Face</li>
                     <li><a href="https://www.youtube.com/watch?v=G8SdsQjdHnM" target="_blank">Organizing Chaos</a> -
-                        Watch videos and content that offer insights on managing complexity in projects and systems.
-                    </li>
+                        Videos on managing complexity</li>
                 </ul>
-
             </article>
+        </section>
 
-            <article>
-                <header>
-                    <h3>Curated Links</h3>
-                </header>
+        <!-- Curated Links Section -->
+        <section>
+            <header>
+                <h2>Curated Links</h2>
+            </header>
+
+            <details>
+                <summary>Resources and Interesting Reads</summary>
                 <ul>
                     <li><a href="https://www.aieinternational.org/" target="_blank">International Association of
                             Exorcists</a> - A global organization supporting Catholic exorcists in their spiritual work.
@@ -283,12 +232,16 @@
                         IT videos.</li>
                     <li><a href="https://zombo.com/" target="_blank">Zombo.com</a> - Endless possibilities await.</li>
                 </ul>
-            </article>
+            </details>
+        </section>
 
+        <!-- Connect with Me Section -->
+        <section>
+            <header>
+                <h2>Connect with Me</h2>
+            </header>
             <article>
-                <header>
-                    <h3>Connect with Me</h3>
-                </header>
+                <p>Feel free to reach out or follow me on the following platforms:</p>
                 <div>
                     <a href="https://github.com/williamzujkowski" target="_blank" aria-label="GitHub">
                         <img src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="50px" width="50px"
@@ -304,10 +257,18 @@
                     </a>
                 </div>
             </article>
-
         </section>
-
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <small>
+            © 2024 William Zujkowski. Built with Pico CSS.
+            <a href="https://github.com/williamzujkowski" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank">LinkedIn</a> |
+            <a href="https://steamcommunity.com/id/grenlan/" target="_blank">Steam</a>
+        </small>
+    </footer>
 
 </body>
 
