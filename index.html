@@ -1,39 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <title>William Zujkowski's Personal Website</title>
-    <meta name="description" content="Welcome to the personal website of William Zujkowski">
+    <meta name="description"
+        content="Welcome to the personal website of William Zujkowski, showcasing homelab projects, professional interests, memberships, curated links, blog posts, and ways to connect.">
+    <meta name="keywords"
+        content="Homelab, Proxmox VE, ARM Devices, Networking, Automation, William Zujkowski, Personal Website, Blog">
+    <meta name="author" content="William Zujkowski">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include the external CSS file -->
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "William Zujkowski",
+      "url": "https://grenlan.com",
+      "sameAs": [
+        "https://github.com/williamzujkowski",
+        "https://www.linkedin.com/in/williamzujkowski/",
+        "https://steamcommunity.com/id/grenlan/"
+      ],
+      "jobTitle": "Security Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Your Organization Name"
+      },
+      "alumniOf": "null",
+      "description": "William Zujkowski is passionate about building and managing homelab projects, large datasets, security, and automation."
+    }
+    </script>
+
+    <!-- Pico CSS -->
     <link rel="stylesheet" href="pico.indigo.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Smooth Scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- Header -->
     <header>
-        <nav>
-            <!-- Navigation links (if any) -->
-        </nav>
+        <div class="container">
+            <h1>William Zujkowski</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#homelab">Homelab</a></li>
+                    <li><a href="#passions">Passions</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#memberships">Memberships</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+            </nav>
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+    <main id="main-content" class="container">
         <!-- Introduction Section -->
         <section>
             <header>
                 <h1>Welcome to My Personal Website</h1>
             </header>
             <article>
-                <p>Hello! I'm William Zujkowski, a software engineer with a passion for technology, gaming, and
+                <p>Hello! I'm William Zujkowski, an IT engineer with a passion for technology, gaming, and
                     exploration.</p>
             </article>
         </section>
 
         <!-- Blog Section -->
-        <section>
+        <section id="blog">
             <header>
                 <h2>Blog Posts</h2>
             </header>
@@ -45,8 +101,8 @@
                     <time datetime="2024-09-14">September 14, 2024</time>
                     <p>Over the past year, my homelab has evolved from a simple setup to a robust environment that
                         mirrors enterprise-level infrastructure. I've been leveraging <a
-                            href="https://www.proxmox.com/en/" target="_blank">Proxmox VE</a> to orchestrate a fleet of
-                        servers and devices, and it's been an incredible journey.</p>
+                            href="https://www.proxmox.com/en/" target="_blank" rel="noopener noreferrer">Proxmox VE</a>
+                        to orchestrate a fleet of servers and devices, and it's been an incredible journey.</p>
 
                     <p><strong>The Backbone: Dell R910</strong></p>
                     <p>At the core of my homelab is a Dell R910 server, boasting 256GB of RAM and 48 threads. This
@@ -71,8 +127,8 @@
                         homelab:</p>
                     <ul>
                         <li><a href="https://shop.zimaboard.com/products/zimablade-single-board-server-for-cyber-native"
-                                target="_blank">Zimablades</a>: These compact yet powerful SBCs are perfect for
-                            lightweight services and edge computing tasks.</li>
+                                target="_blank" rel="noopener noreferrer">Zimablades</a>: These compact yet powerful
+                            SBCs are perfect for lightweight services and edge computing tasks.</li>
                         <li><strong>Raspberry Pi 5</strong>: The latest iteration offers improved performance, making it
                             suitable for a variety of applications.</li>
                         <li><strong>Other ARM-based SBCs</strong>: Running Debian 12, these devices are prepped for
@@ -122,9 +178,9 @@
 
                     <p>We've all reached that point where every line of code feels like a riddle wrapped in an enigma,
                         served with a side of sarcasm from the compiler. That's when you know it's time to consult the
-                        <a href="https://grenlan.com/pizza.html" target="_blank">Pizza Calculator for IT Engineers</a>.
-                        Why waste brainpower estimating pepperoni quantities when you could be figuring out why your
-                        containers are mysteriously crashing?
+                        <a href="https://grenlan.com/pizza.html" target="_blank" rel="noopener noreferrer">Pizza
+                            Calculator for IT Engineers</a>. Why waste brainpower estimating pepperoni quantities when
+                        you could be figuring out why your containers are mysteriously crashing?
                     </p>
 
                     <p>Whether you're a fan of <strong>Quantum Blockchain Pizza</strong> (each slice is simultaneously
@@ -144,9 +200,9 @@
                         pizza!</p>
 
                     <p>So next time debugging feels like a distributed denial-of-service attack on your sanity, grab a
-                        slice, fire up the <a href="https://grenlan.com/pizza.html" target="_blank">Pizza
-                            Calculator</a>, and keep coding. And remember, if all else fails, there's always more pizza.
-                        🍕</p>
+                        slice, fire up the <a href="https://grenlan.com/pizza.html" target="_blank"
+                            rel="noopener noreferrer">Pizza Calculator</a>, and keep coding. And remember, if all else
+                        fails, there's always more pizza. 🍕</p>
                 </details>
             </article>
 
@@ -156,10 +212,11 @@
                     <summary>The Origin of Grenlan</summary>
                     <time datetime="2024-07-12">July 12, 2024</time>
                     <p>Back in the summer of '99, I was diving headfirst into <a href="https://www.everquest.com/home"
-                            target="_blank">EverQuest</a>, one of the pioneering MMORPGs that defined a generation of
-                        online gaming. This was the era of dial-up connections, where the symphony of modem noises was
-                        the soundtrack to our digital adventures. EverQuest opened up the expansive world of Norrath, a
-                        place where thousands could quest, battle mythical creatures, and forge friendships.</p>
+                            target="_blank" rel="noopener noreferrer">EverQuest</a>, one of the pioneering MMORPGs that
+                        defined a generation of online gaming. This was the era of dial-up connections, where the
+                        symphony of modem noises was the soundtrack to our digital adventures. EverQuest opened up the
+                        expansive world of Norrath, a place where thousands could quest, battle mythical creatures, and
+                        forge friendships.</p>
 
                     <p>Choosing a character class was no trivial matter, and I found myself drawn to the Bard. Bards in
                         EverQuest were the ultimate multi-taskers—musical maestros who could boost allies, debuff foes,
@@ -171,20 +228,20 @@
                         certain number of places down or up the alphabet. I took the letters of my own name, applied a
                         few shifts, jumbled them around, and out came "Grenlan." It was unique, had a nice ring to it,
                         and perfectly suited my bard's adventures in Norrath. You can still check out my old <a
-                            href="https://ap.tritonguild.net/character.php?char=grenlan" target="_blank">character
-                            profile</a>.</p>
+                            href="https://ap.tritonguild.net/character.php?char=grenlan" target="_blank"
+                            rel="noopener noreferrer">character profile</a>.</p>
 
                     <p>Since then, "Grenlan" has become more than just a gaming alias—it's an extension of my digital
-                        identity. From epic raids in <a href="https://worldofwarcraft.com/" target="_blank">World of
-                            Warcraft</a> to tabletop campaigns in <a href="https://dnd.wizards.com/"
-                            target="_blank">Dungeons and Dragons</a>, Grenlan has been there, embodying the spirit of
-                        adventure and camaraderie.</p>
+                        identity. From epic raids in <a href="https://worldofwarcraft.com/" target="_blank"
+                            rel="noopener noreferrer">World of Warcraft</a> to tabletop campaigns in <a
+                            href="https://dnd.wizards.com/" target="_blank" rel="noopener noreferrer">Dungeons and
+                            Dragons</a>, Grenlan has been there, embodying the spirit of adventure and camaraderie.</p>
 
                     <p>One of the highlights of my gaming journey has been my time with the high-end raiding guild <a
-                            href="https://www.tritonguild.net/" target="_blank">Triton</a>. Occasionally, nostalgia
-                        calls, and I log back into EverQuest to join raids, reconnect with old friends, and relive those
-                        epic battles. There's something magical about coordinating with a team to overcome challenges,
-                        especially when everyone's on a shaky dial-up connection!</p>
+                            href="https://www.tritonguild.net/" target="_blank" rel="noopener noreferrer">Triton</a>.
+                        Occasionally, nostalgia calls, and I log back into EverQuest to join raids, reconnect with old
+                        friends, and relive those epic battles. There's something magical about coordinating with a team
+                        to overcome challenges, especially when everyone's on a shaky dial-up connection!</p>
 
                     <p>Creating "Grenlan" taught me that sometimes the best ideas come from blending different
                         passions—in this case, cryptography and gaming. It's a reminder of how far I've come since those
@@ -304,7 +361,7 @@ fi
             <article>
                 <details>
                     <summary>Homelab Adventures: Building a Proxmox Cluster and automating with Ansible</summary>
-                    <time datetime="2023-08-01">April 1, 2024</time>
+                    <time datetime="2024-04-01">April 1, 2024</time>
                     <p>As my interest in homelabs grew, I decided to take on a new challenge: building a Proxmox cluster
                         using a mix of x86 and ARM-based devices. The goal was to create a scalable, energy-efficient
                         setup that could handle various services and workloads.</p>
@@ -318,8 +375,8 @@ fi
                     <p>To complement the x86 servers, I incorporated ARM-based single-board computers:</p>
                     <ul>
                         <li><a href="https://shop.zimaboard.com/products/zimablade-single-board-server-for-cyber-native"
-                                target="_blank">Zimablades</a>: Ideal for lightweight container workloads and testing
-                            environments.</li>
+                                target="_blank" rel="noopener noreferrer">Zimablades</a>: Ideal for lightweight
+                            container workloads and testing environments.</li>
                         <li><strong>Raspberry Pi 5</strong>: Used for hosting IoT services and as a monitoring node.
                         </li>
                     </ul>
@@ -364,7 +421,7 @@ fi
         </section>
 
         <!-- Personal Passions Section -->
-        <section>
+        <section id="passions">
             <header>
                 <h2>Personal Passions</h2>
             </header>
@@ -372,63 +429,70 @@ fi
                 <p>Here are some of my personal interests and passions:</p>
                 <ul>
                     <li>Adventures with my wife and 1-year-old son</li>
-                    <li>Playing video games on <a href="https://steamcommunity.com/id/grenlan/"
-                            target="_blank">Steam</a></li>
-                    <li>Enjoying <a href="https://www.youtube.com/watch?v=kj0GDeS4A1c" target="_blank">board games</a>
-                        and <a href="https://www.youtube.com/watch?v=MaiUUitZbns" target="_blank">card games</a></li>
+                    <li>Playing video games on <a href="https://steamcommunity.com/id/grenlan/" target="_blank"
+                            rel="noopener noreferrer">Steam</a></li>
+                    <li>Enjoying <a href="https://www.youtube.com/watch?v=kj0GDeS4A1c" target="_blank"
+                            rel="noopener noreferrer">board games</a> and <a
+                            href="https://www.youtube.com/watch?v=MaiUUitZbns" target="_blank"
+                            rel="noopener noreferrer">card games</a></li>
                     <li><a href="https://www.goodreads.com/review/list/52529234-william-zujkowski?shelf=read"
-                            target="_blank">Reading</a></li>
+                            target="_blank" rel="noopener noreferrer">Reading</a></li>
                 </ul>
             </article>
         </section>
 
         <!-- Professional Interests Section -->
-        <section>
+        <section id="interests">
             <header>
                 <h2>Professional Interests</h2>
             </header>
             <article>
                 <p>I am passionate about the following professional fields:</p>
                 <ul>
-                    <li><a href="https://github.com/greatscottgadgets/hackrf" target="_blank">Software-defined Radio</a>
-                        - HackRF platform for SDR enthusiasts</li>
-                    <li><a href="https://supercomputing.org/" target="_blank">Supercomputing</a> - High-performance
-                        computing resources</li>
-                    <li><a href="https://www.kaggle.com/williamzujkowski" target="_blank">Analyzing Large Datasets</a> -
-                        Data science projects on Kaggle</li>
-                    <li><a href="https://huggingface.co/Chaosagent" target="_blank">Exploring AI</a> - AI models and
-                        tools on Hugging Face</li>
-                    <li><a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">The FIRST
-                            website</a> - The WorldWideWeb (W3) is a wide-area hypermedia information retrieval
-                        initiative aiming to give universal access to a large universe of documents.</li>
+                    <li><a href="https://github.com/greatscottgadgets/hackrf" target="_blank"
+                            rel="noopener noreferrer">Software-defined Radio</a> - HackRF platform for SDR enthusiasts
+                    </li>
+                    <li><a href="https://supercomputing.org/" target="_blank"
+                            rel="noopener noreferrer">Supercomputing</a> - High-performance computing resources</li>
+                    <li><a href="https://www.kaggle.com/williamzujkowski" target="_blank"
+                            rel="noopener noreferrer">Analyzing Large Datasets</a> - Data science projects on Kaggle
+                    </li>
+                    <li><a href="https://huggingface.co/Chaosagent" target="_blank" rel="noopener noreferrer">Exploring
+                            AI</a> - AI models and tools on Hugging Face</li>
+                    <li><a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank"
+                            rel="noopener noreferrer">The FIRST website</a> - The WorldWideWeb (W3) is a wide-area
+                        hypermedia information retrieval initiative aiming to give universal access to a large universe
+                        of documents.</li>
                 </ul>
             </article>
         </section>
 
-        <!-- Professional Memberships -->
-        <section>
+        <!-- Professional Memberships Section -->
+        <section id="memberships">
             <header>
                 <h2>Professional Memberships</h2>
             </header>
             <article>
                 <p>I am a member of the following professional organizations:</p>
                 <ul>
-                    <li><a href="https://owasp.org/" target="_blank">OWASP</a> - The Open Worldwide Application Security
-                        Project is a nonprofit foundation that works to improve the security of software.</li>
-                    <li><a href="https://iacr.org/" target="_blank">International Association for Cryptologic Research
-                            (IACR)</a> - A non-profit scientific organization whose purpose is to further research in
-                        cryptology and related fields.</li>
-                    <li><a href="https://www.acm.org/special-interest-groups/sigs/sighpc" target="_blank">ACM SIGHPC</a>
-                        - Special Interest Group on High Performance Computing</li>
-                    <li><a href="https://www.usenix.org/" target="_blank">USENIX</a> - Since 1975, USENIX has brought
-                        together the community of engineers, researchers, and practitioners working on the cutting edge
-                        of the computing world.</li>
+                    <li><a href="https://owasp.org/" target="_blank" rel="noopener noreferrer">OWASP</a> - The Open
+                        Worldwide Application Security Project is a nonprofit foundation that works to improve the
+                        security of software.</li>
+                    <li><a href="https://iacr.org/" target="_blank" rel="noopener noreferrer">International Association
+                            for Cryptologic Research (IACR)</a> - A non-profit scientific organization whose purpose is
+                        to further research in cryptology and related fields.</li>
+                    <li><a href="https://www.acm.org/special-interest-groups/sigs/sighpc" target="_blank"
+                            rel="noopener noreferrer">ACM SIGHPC</a> - Special Interest Group on High Performance
+                        Computing</li>
+                    <li><a href="https://www.usenix.org/" target="_blank" rel="noopener noreferrer">USENIX</a> - Since
+                        1975, USENIX has brought together the community of engineers, researchers, and practitioners
+                        working on the cutting edge of the computing world.</li>
                 </ul>
             </article>
         </section>
 
         <!-- Curated Links Section -->
-        <section>
+        <section id="links">
             <header>
                 <h2>Curated Links</h2>
             </header>
@@ -436,109 +500,118 @@ fi
             <details>
                 <summary>Science and Exploration</summary>
                 <ul>
-                    <li><a href="https://www.centauri-dreams.org/" target="_blank">Centauri Dreams</a> - Paul Gilster's
-                        blog on deep space exploration and interstellar travel possibilities.</li>
-                    <li><a href="https://tauzero.aero/" target="_blank">The Tau Zero Foundation</a> - Explores the
-                        science behind interstellar travel and advances in space exploration.</li>
+                    <li><a href="https://www.centauri-dreams.org/" target="_blank" rel="noopener noreferrer">Centauri
+                            Dreams</a> - Paul Gilster's blog on deep space exploration and interstellar travel
+                        possibilities.</li>
+                    <li><a href="https://tauzero.aero/" target="_blank" rel="noopener noreferrer">The Tau Zero
+                            Foundation</a> - Explores the science behind interstellar travel and advances in space
+                        exploration.</li>
                 </ul>
             </details>
 
             <details>
                 <summary>Games and Entertainment</summary>
                 <ul>
-                    <li><a href="https://loderunnerwebgame.com/LodeRunner/" target="_blank">LodeRunner</a> - An HTML5
-                        remake of LodeRunner.</li>
-                    <li><a href="https://www.decisionproblem.com/paperclips/" target="_blank">Paperclip AI Game</a> - A
-                        game about making paperclips.</li>
-                    <li><a href="https://zombo.com/" target="_blank">Zombo.com</a> - Endless possibilities await.</li>
+                    <li><a href="https://loderunnerwebgame.com/LodeRunner/" target="_blank"
+                            rel="noopener noreferrer">LodeRunner</a> - An HTML5 remake of LodeRunner.</li>
+                    <li><a href="https://www.decisionproblem.com/paperclips/" target="_blank"
+                            rel="noopener noreferrer">Paperclip AI Game</a> - A game about making paperclips.</li>
+                    <li><a href="https://zombo.com/" target="_blank" rel="noopener noreferrer">Zombo.com</a> - Endless
+                        possibilities await.</li>
                     <li><a href="https://www.bbc.co.uk/programmes/articles/1KfYb5qlvYqjgq2wDPSB96n/the-hitchhiker-s-guide-to-the-galaxy-game-30th-anniversary-edition"
-                            target="_blank">The Hitchhiker's Guide to the Galaxy Game</a> - A classic text adventure
-                        game.</li>
-                    <li><a href="https://classicreload.com/" target="_blank">ClassicReload</a> - Play classic DOS games
-                        online.</li>
+                            target="_blank" rel="noopener noreferrer">The Hitchhiker's Guide to the Galaxy Game</a> - A
+                        classic text adventure game.</li>
+                    <li><a href="https://classicreload.com/" target="_blank" rel="noopener noreferrer">ClassicReload</a>
+                        - Play classic DOS games online.</li>
                 </ul>
             </details>
 
             <details>
                 <summary>Learning Resources</summary>
                 <ul>
-                    <li><a href="https://learnxinyminutes.com/" target="_blank">Learn X in Y Minutes</a> - Quick
-                        programming language tutorials.</li>
-                    <li><a href="https://open5gs.org/open5gs/docs/tutorial/01-your-first-lte/" target="_blank">Set Up
-                            Your Own LTE Network</a> - DIY LTE network tutorial.</li>
-                    <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> - Learn to code with
-                        free online courses.</li>
-                    <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> - Access courses from top
-                        universities and organizations.</li>
-                    <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - Free educational
-                        resources on various subjects.</li>
+                    <li><a href="https://learnxinyminutes.com/" target="_blank" rel="noopener noreferrer">Learn X in Y
+                            Minutes</a> - Quick programming language tutorials.</li>
+                    <li><a href="https://open5gs.org/open5gs/docs/tutorial/01-your-first-lte/" target="_blank"
+                            rel="noopener noreferrer">Set Up Your Own LTE Network</a> - DIY LTE network tutorial.</li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank"
+                            rel="noopener noreferrer">FreeCodeCamp</a> - Learn to code with free online courses.</li>
+                    <li><a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">Coursera</a> -
+                        Access courses from top universities and organizations.</li>
+                    <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Khan
+                            Academy</a> - Free educational resources on various subjects.</li>
                 </ul>
             </details>
 
             <details>
                 <summary>Interesting and Novel Websites</summary>
                 <ul>
-                    <li><a href="https://www.kleinbottle.com/" target="_blank">Acme Kleinbottles</a> - Purchase a
-                        mathematical curiosity.</li>
-                    <li><a href="https://radio.garden/listen" target="_blank">Radio Garden</a> - Listen to live radio
-                        stations worldwide by rotating a virtual globe.</li>
-                    <li><a href="https://www.submarinecablemap.com/" target="_blank">Submarine Cable Map</a> - An
-                        interactive map of the global undersea cables that power the internet.</li>
-                    <li><a href="https://publicdomainreview.org/" target="_blank">The Public Domain Review</a> -
-                        Explores and curates art, literature, and ideas that are now in the public domain.</li>
-                    <li><a href="https://www.infiniteconversation.com/" target="_blank">The Infinite Conversation</a> -
-                        An AI-generated, never-ending conversation between Werner Herzog and Slavoj Žižek.</li>
-                    <li><a href="https://www.thewebsiteisdown.com" target="_blank">The Website is Down</a> - Hilarious
-                        IT videos.</li>
-                    <li><a href="https://archive.org/web/" target="_blank">Wayback Machine</a> - Explore archived
-                        versions of websites over time.</li>
-                    <li><a href="https://strangeloopcanon.com/" target="_blank">Strange Loops</a> - Deep dives into
-                        complex topics.</li>
+                    <li><a href="https://www.kleinbottle.com/" target="_blank" rel="noopener noreferrer">Acme
+                            Kleinbottles</a> - Purchase a mathematical curiosity.</li>
+                    <li><a href="https://radio.garden/listen" target="_blank" rel="noopener noreferrer">Radio Garden</a>
+                        - Listen to live radio stations worldwide by rotating a virtual globe.</li>
+                    <li><a href="https://www.submarinecablemap.com/" target="_blank" rel="noopener noreferrer">Submarine
+                            Cable Map</a> - An interactive map of the global undersea cables that power the internet.
+                    </li>
+                    <li><a href="https://publicdomainreview.org/" target="_blank" rel="noopener noreferrer">The Public
+                            Domain Review</a> - Explores and curates art, literature, and ideas that are now in the
+                        public domain.</li>
+                    <li><a href="https://www.infiniteconversation.com/" target="_blank" rel="noopener noreferrer">The
+                            Infinite Conversation</a> - An AI-generated, never-ending conversation between Werner Herzog
+                        and Slavoj Žižek.</li>
+                    <li><a href="https://www.thewebsiteisdown.com" target="_blank" rel="noopener noreferrer">The Website
+                            is Down</a> - Hilarious IT videos.</li>
+                    <li><a href="https://archive.org/web/" target="_blank" rel="noopener noreferrer">Wayback Machine</a>
+                        - Explore archived versions of websites over time.</li>
+                    <li><a href="https://strangeloopcanon.com/" target="_blank" rel="noopener noreferrer">Strange
+                            Loops</a> - Deep dives into complex topics.</li>
                 </ul>
             </details>
 
             <details>
                 <summary>Tech and Projects</summary>
                 <ul>
-                    <li><a href="https://www.rtl-sdr.com/" target="_blank">RTL-SDR</a> - A blog about Software Defined
-                        Radio and in-depth tutorials.</li>
-                    <li><a href="https://www.gnuradio.org/" target="_blank">GNU Radio</a> - An open-source toolkit for
-                        building software radios.</li>
-                    <li><a href="https://www.top500.org/" target="_blank">TOP500</a> - The list of the world's fastest
-                        supercomputers.</li>
-                    <li><a href="https://archive.ics.uci.edu/ml/index.php" target="_blank">UCI Machine Learning
-                            Repository</a> - A collection of machine learning datasets.</li>
-                    <li><a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> - An end-to-end open-source
-                        machine learning platform.</li>
-                    <li><a href="https://pytorch.org/" target="_blank">PyTorch</a> - An open-source machine learning
-                        library for Python.</li>
-                    <li><a href="https://openai.com/" target="_blank">OpenAI</a> - Advancing AI for the benefit of
-                        humanity.</li>
-                    <li><a href="https://github.com/trending" target="_blank">GitHub Trending</a> - Discover what's
-                        trending in the open-source community.</li>
+                    <li><a href="https://www.rtl-sdr.com/" target="_blank" rel="noopener noreferrer">RTL-SDR</a> - A
+                        blog about Software Defined Radio and in-depth tutorials.</li>
+                    <li><a href="https://www.gnuradio.org/" target="_blank" rel="noopener noreferrer">GNU Radio</a> - An
+                        open-source toolkit for building software radios.</li>
+                    <li><a href="https://www.top500.org/" target="_blank" rel="noopener noreferrer">TOP500</a> - The
+                        list of the world's fastest supercomputers.</li>
+                    <li><a href="https://archive.ics.uci.edu/ml/index.php" target="_blank" rel="noopener noreferrer">UCI
+                            Machine Learning Repository</a> - A collection of machine learning datasets.</li>
+                    <li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">TensorFlow</a> -
+                        An end-to-end open-source machine learning platform.</li>
+                    <li><a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">PyTorch</a> - An
+                        open-source machine learning library for Python.</li>
+                    <li><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">OpenAI</a> - Advancing
+                        AI for the benefit of humanity.</li>
+                    <li><a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub
+                            Trending</a> - Discover what's trending in the open-source community.</li>
                 </ul>
             </details>
         </section>
 
         <!-- Connect with Me Section -->
-        <section>
+        <section id="connect">
             <header>
                 <h2>Connect with Me</h2>
             </header>
             <article>
                 <p>Feel free to reach out or follow me on the following platforms:</p>
                 <div>
-                    <a href="https://github.com/williamzujkowski" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/williamzujkowski" target="_blank" aria-label="GitHub"
+                        rel="noopener noreferrer">
                         <img src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="50px" width="50px"
-                            alt="GitHub" loading="lazy">
+                            alt="GitHub Logo" loading="lazy">
                     </a>
-                    <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank" aria-label="LinkedIn"
+                        rel="noopener noreferrer">
                         <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-tile.svg" height="50px"
-                            width="50px" alt="LinkedIn" loading="lazy">
+                            width="50px" alt="LinkedIn Logo" loading="lazy">
                     </a>
-                    <a href="https://steamcommunity.com/id/grenlan/" target="_blank" aria-label="Steam">
+                    <a href="https://steamcommunity.com/id/grenlan/" target="_blank" aria-label="Steam"
+                        rel="noopener noreferrer">
                         <img src="https://www.vectorlogo.zone/logos/steampowered/steampowered-icon.svg" height="50px"
-                            width="50px" alt="Steam" loading="lazy">
+                            width="50px" alt="Steam Logo" loading="lazy">
                     </a>
                 </div>
             </article>
@@ -549,12 +622,39 @@ fi
     <footer>
         <small>
             © 2024 William Zujkowski. Built with Pico CSS.
-            <a href="https://github.com/williamzujkowski" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank">LinkedIn</a> |
-            <a href="https://steamcommunity.com/id/grenlan/" target="_blank">Steam</a>
+            <a href="https://github.com/williamzujkowski" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://www.linkedin.com/in/williamzujkowski/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://steamcommunity.com/id/grenlan/" target="_blank" rel="noopener noreferrer">Steam</a>
         </small>
     </footer>
 
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            toggleButton.textContent = '🌙';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'light') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                toggleButton.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                toggleButton.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 
 </html>
